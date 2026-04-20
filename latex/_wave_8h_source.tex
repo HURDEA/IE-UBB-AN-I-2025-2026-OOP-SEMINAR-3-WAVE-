@@ -1,0 +1,80 @@
+\doxysection{Wave.\+h}
+\hypertarget{_wave_8h_source}{}\label{_wave_8h_source}\doxymbox{\hyperlink{_wave_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_dynamic_array_8h}{DynamicArray.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_acoustic_wave_ad13de15b14326449f0d55ceae9c61dc1}{AcousticWave}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_acoustic_wave_ad076aa6b497ee3426a884419050c97f2}{frequency}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_acoustic_wave_a4522777a15d2e1e30024c9acead60746}{amplitude}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_acoustic_wave_a1dfb7ffff3ddeeedb5705587e8f351f4}{sample\_rate}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \doxymbox{\hyperlink{class_dynamic_array}{DynamicArray<float>}}\ \doxymbox{\hyperlink{class_acoustic_wave_a348590cd98937636b32b3c343ea57085}{samples}};\ }
+\DoxyCodeLine{00021\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_acoustic_wave_a85495cc953a90ce4cea075bcf9ff3ee4}{wave\_type}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \doxymbox{\hyperlink{class_acoustic_wave_ad13de15b14326449f0d55ceae9c61dc1}{AcousticWave}}(\textcolor{keywordtype}{float}\ freq\ =\ 440.0f,\ \textcolor{keywordtype}{float}\ amp\ =\ 0.8f,\ \textcolor{keywordtype}{float}\ sr\ =\ 44100.0f,\ std::string\ type\ =\ \textcolor{stringliteral}{"{}Generic"{}});}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_acoustic_wave_aeec2ceb92b34542c2fcacb4e7a8ed1c2}{\string~AcousticWave}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_acoustic_wave_a326481ed7964cd28bef9d5dae8dd26d8}{computeSamples}}(\textcolor{keywordtype}{float}\ duration);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_dynamic_array}{DynamicArray<float>}}\&\ \doxymbox{\hyperlink{class_acoustic_wave_a50f388ca66f50c28cfcd6b9714566208}{getSamples}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_acoustic_wave_aa728c5b6e49aa26f9633ae61032e2a05}{getSampleCount}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00061\ \ \ \ \ \doxymbox{\hyperlink{class_acoustic_wave_ad13de15b14326449f0d55ceae9c61dc1}{AcousticWave}}\&\ \doxymbox{\hyperlink{class_acoustic_wave_a7bf4027f0ceb402d9870f8a1355dcfd6}{operator*=}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_acoustic_wave_ad13de15b14326449f0d55ceae9c61dc1}{AcousticWave}}\&\ other);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00068\ \ \ \ \ \doxymbox{\hyperlink{class_acoustic_wave_ad13de15b14326449f0d55ceae9c61dc1}{AcousticWave}}\ \doxymbox{\hyperlink{class_acoustic_wave_ae4c81adcb5dd002edcb284c1eb75ba54}{operator*}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_acoustic_wave_ad13de15b14326449f0d55ceae9c61dc1}{AcousticWave}}\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{friend}\ std::ostream\&\ \doxymbox{\hyperlink{class_acoustic_wave_a85748cee4c08d1ab28c0c95a47376751}{operator<<}}(std::ostream\&\ os,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_acoustic_wave_ad13de15b14326449f0d55ceae9c61dc1}{AcousticWave}}\&\ wave);}
+\DoxyCodeLine{00077\ \};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00083\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_sine_wave_add74802f9bc4223eba814f3de5750a8d}{SineWave}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_acoustic_wave_ad13de15b14326449f0d55ceae9c61dc1}{AcousticWave}}\ \{}
+\DoxyCodeLine{00084\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00091\ \ \ \ \ \doxymbox{\hyperlink{class_sine_wave_add74802f9bc4223eba814f3de5750a8d}{SineWave}}(\textcolor{keywordtype}{float}\ freq,\ \textcolor{keywordtype}{float}\ amp,\ \textcolor{keywordtype}{float}\ sr);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_sine_wave_aa5e7dd5edf5c6244c4cbdef472b24a24}{computeSamples}}(\textcolor{keywordtype}{float}\ duration)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00098\ \};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00104\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_square_wave_af2fe8cb1420628a93ce87a8cd02bf70f}{SquareWave}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_acoustic_wave_ad13de15b14326449f0d55ceae9c61dc1}{AcousticWave}}\ \{}
+\DoxyCodeLine{00105\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{float}\ sign(\textcolor{keywordtype}{float}\ val)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00120\ \ \ \ \ \doxymbox{\hyperlink{class_square_wave_af2fe8cb1420628a93ce87a8cd02bf70f}{SquareWave}}(\textcolor{keywordtype}{float}\ freq,\ \textcolor{keywordtype}{float}\ amp,\ \textcolor{keywordtype}{float}\ sr);}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_square_wave_ad0ba66e8210bafb936069aa164ca3bca}{computeSamples}}(\textcolor{keywordtype}{float}\ duration)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00127\ \};}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00133\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_triangle_wave_ac3f405c28a8dec59357d7a4ad2de7cd2}{TriangleWave}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_acoustic_wave_ad13de15b14326449f0d55ceae9c61dc1}{AcousticWave}}\ \{}
+\DoxyCodeLine{00134\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00141\ \ \ \ \ \doxymbox{\hyperlink{class_triangle_wave_ac3f405c28a8dec59357d7a4ad2de7cd2}{TriangleWave}}(\textcolor{keywordtype}{float}\ freq,\ \textcolor{keywordtype}{float}\ amp,\ \textcolor{keywordtype}{float}\ sr);}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_triangle_wave_a8282c7e9071a7997bfc253a8c85ae596}{computeSamples}}(\textcolor{keywordtype}{float}\ duration)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00148\ \};}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00154\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_sawtooth_wave_a0108a997711338a476f3e4820d1428a7}{SawtoothWave}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_acoustic_wave_ad13de15b14326449f0d55ceae9c61dc1}{AcousticWave}}\ \{}
+\DoxyCodeLine{00155\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00162\ \ \ \ \ \doxymbox{\hyperlink{class_sawtooth_wave_a0108a997711338a476f3e4820d1428a7}{SawtoothWave}}(\textcolor{keywordtype}{float}\ freq,\ \textcolor{keywordtype}{float}\ amp,\ \textcolor{keywordtype}{float}\ sr);}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_sawtooth_wave_acb5c561a757e9bbb0121ee2c6a2d0f82}{computeSamples}}(\textcolor{keywordtype}{float}\ duration)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00169\ \};}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00175\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_synthesizer_track_a89da0a7dc5d526c798dca64c78a7b5da}{SynthesizerTrack}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_acoustic_wave_ad13de15b14326449f0d55ceae9c61dc1}{AcousticWave}}\ \{}
+\DoxyCodeLine{00176\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00181\ \ \ \ \ \doxymbox{\hyperlink{class_synthesizer_track_a89da0a7dc5d526c798dca64c78a7b5da}{SynthesizerTrack}}(\textcolor{keywordtype}{float}\ sr\ =\ 44100.0f);}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_synthesizer_track_a1204349346971620019c8622d02000db}{addNote}}(\textcolor{keywordtype}{float}\ freq,\ \textcolor{keywordtype}{float}\ duration,\ \textcolor{keywordtype}{float}\ amp\ =\ 0.5f);}
+\DoxyCodeLine{00190\ \};}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00196\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_wave_output}{WaveOutput}}\ \{}
+\DoxyCodeLine{00197\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00204\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_wave_output_a23f91e605b8be7a89fe241fa642f9b2e}{saveSamples}}(\textcolor{keyword}{const}\ std::string\&\ csv\_path,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_acoustic_wave}{AcousticWave}}\&\ w);}
+\DoxyCodeLine{00205\ \};}
+
+\end{DoxyCode}

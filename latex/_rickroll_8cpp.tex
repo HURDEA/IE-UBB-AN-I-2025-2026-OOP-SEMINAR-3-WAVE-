@@ -1,0 +1,42 @@
+\doxysection{Rickroll.\+cpp File Reference}
+\hypertarget{_rickroll_8cpp}{}\label{_rickroll_8cpp}\index{Rickroll.cpp@{Rickroll.cpp}}
+
+
+Implementation of the algorithmic melody sequence generator.  
+
+
+{\ttfamily \+\#include "{}Rickroll.\+h"{}}\newline
+{\ttfamily \+\#include "{}Wave.\+h"{}}\newline
+{\ttfamily \+\#include $<$iostream$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{_rickroll_8cpp_a75686b0697103454ce4c5534445a467c}{generate\+Rickroll\+Sequence}} ()
+\begin{DoxyCompactList}\small\item\em Generates a specific melodic sequence ("{}\+Rickroll"{}) and saves it to disk. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the algorithmic melody sequence generator. 
+
+
+\begin{DoxyItemize}
+\item Contains the specific frequency constants and timing logic required to generate the custom synthesizer track. 
+\end{DoxyItemize}
+
+\label{doc-func-members}
+\Hypertarget{_rickroll_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_rickroll_8cpp_a75686b0697103454ce4c5534445a467c}\index{Rickroll.cpp@{Rickroll.cpp}!generateRickrollSequence@{generateRickrollSequence}}
+\index{generateRickrollSequence@{generateRickrollSequence}!Rickroll.cpp@{Rickroll.cpp}}
+\doxysubsubsection{\texorpdfstring{generateRickrollSequence()}{generateRickrollSequence()}}
+{\footnotesize\ttfamily \label{_rickroll_8cpp_a75686b0697103454ce4c5534445a467c} 
+void generate\+Rickroll\+Sequence (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Generates a specific melodic sequence ("{}\+Rickroll"{}) and saves it to disk. 
+
+
+\begin{DoxyItemize}
+\item Utilizes the \doxylink{class_synthesizer_track}{Synthesizer\+Track} class to sequence a series of square wave notes based on predetermined frequencies and a specified BPM tempo. The final output is serialized to \textquotesingle{}rickroll.\+csv\textquotesingle{}. 
+\end{DoxyItemize}

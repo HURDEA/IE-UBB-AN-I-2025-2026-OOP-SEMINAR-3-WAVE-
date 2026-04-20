@@ -1,0 +1,234 @@
+\doxysection{Acoustic\+Wave Class Reference}
+\hypertarget{class_acoustic_wave}{}\label{class_acoustic_wave}\index{AcousticWave@{AcousticWave}}
+
+
+Base class representing a generic acoustic waveform.  
+
+
+
+
+{\ttfamily \+\#include $<$Wave.\+h$>$}
+
+Inheritance diagram for Acoustic\+Wave:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.898305cm]{class_acoustic_wave}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_acoustic_wave_ad13de15b14326449f0d55ceae9c61dc1}{Acoustic\+Wave}} (float freq=440.\+0f, float amp=0.\+8f, float sr=44100.\+0f, std::\+string type="{}Generic"{})
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{class_acoustic_wave}{Acoustic\+Wave} with specified parameters. \end{DoxyCompactList}\item 
+\Hypertarget{class_acoustic_wave_aeec2ceb92b34542c2fcacb4e7a8ed1c2}\label{class_acoustic_wave_aeec2ceb92b34542c2fcacb4e7a8ed1c2} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Acoustic\+Wave} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper derived class cleanup. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_acoustic_wave_a326481ed7964cd28bef9d5dae8dd26d8}{compute\+Samples}} (float duration)
+\begin{DoxyCompactList}\small\item\em Allocates and initializes the sample array based on duration. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_dynamic_array}{Dynamic\+Array}}$<$ float $>$ \& \doxymbox{\hyperlink{class_acoustic_wave_a50f388ca66f50c28cfcd6b9714566208}{get\+Samples}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the generated audio samples. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_acoustic_wave_aa728c5b6e49aa26f9633ae61032e2a05}{get\+Sample\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the total number of allocated samples. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_acoustic_wave}{Acoustic\+Wave}} \& \doxymbox{\hyperlink{class_acoustic_wave_a7bf4027f0ceb402d9870f8a1355dcfd6}{operator\texorpdfstring{$\ast$}{*}=}} (const \doxymbox{\hyperlink{class_acoustic_wave}{Acoustic\+Wave}} \&other)
+\begin{DoxyCompactList}\small\item\em Performs amplitude modulation by multiplying with another wave in-\/place. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_acoustic_wave}{Acoustic\+Wave}} \doxymbox{\hyperlink{class_acoustic_wave_ae4c81adcb5dd002edcb284c1eb75ba54}{operator\texorpdfstring{$\ast$}{*}}} (const \doxymbox{\hyperlink{class_acoustic_wave}{Acoustic\+Wave}} \&other) const
+\begin{DoxyCompactList}\small\item\em Performs amplitude modulation, returning a new wave instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \doxymbox{\hyperlink{class_acoustic_wave_ad076aa6b497ee3426a884419050c97f2}{frequency}}
+\item 
+float \doxymbox{\hyperlink{class_acoustic_wave_a4522777a15d2e1e30024c9acead60746}{amplitude}}
+\item 
+float \doxymbox{\hyperlink{class_acoustic_wave_a1dfb7ffff3ddeeedb5705587e8f351f4}{sample\+\_\+rate}}
+\item 
+\doxymbox{\hyperlink{class_dynamic_array}{Dynamic\+Array}}$<$ float $>$ \doxymbox{\hyperlink{class_acoustic_wave_a348590cd98937636b32b3c343ea57085}{samples}}
+\item 
+std::\+string \doxymbox{\hyperlink{class_acoustic_wave_a85495cc953a90ce4cea075bcf9ff3ee4}{wave\+\_\+type}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std::\+ostream \& \doxymbox{\hyperlink{class_acoustic_wave_a85748cee4c08d1ab28c0c95a47376751}{operator$<$$<$}} (std::\+ostream \&os, const \doxymbox{\hyperlink{class_acoustic_wave}{Acoustic\+Wave}} \&wave)
+\begin{DoxyCompactList}\small\item\em Overloads the stream insertion operator for outputting wave metadata. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class representing a generic acoustic waveform. 
+
+\label{doc-constructors}
+\Hypertarget{class_acoustic_wave_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_acoustic_wave_ad13de15b14326449f0d55ceae9c61dc1}\index{AcousticWave@{AcousticWave}!AcousticWave@{AcousticWave}}
+\index{AcousticWave@{AcousticWave}!AcousticWave@{AcousticWave}}
+\doxysubsubsection{\texorpdfstring{AcousticWave()}{AcousticWave()}}
+{\footnotesize\ttfamily \label{class_acoustic_wave_ad13de15b14326449f0d55ceae9c61dc1} 
+Acoustic\+Wave::\+\+Acoustic\+Wave (\begin{DoxyParamCaption}\item[{float}]{freq}{ = {\ttfamily 440.0f}, }\item[{float}]{amp}{ = {\ttfamily 0.8f}, }\item[{float}]{sr}{ = {\ttfamily 44100.0f}, }\item[{std::\+string}]{type}{ = {\ttfamily "{}Generic"{}}}\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{class_acoustic_wave}{Acoustic\+Wave} with specified parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em freq} & The frequency in Hertz (default 440.\+0f). \\
+\hline
+{\em amp} & The amplitude (default 0.\+8f). \\
+\hline
+{\em sr} & The sample rate in Hertz (default 44100.\+0f). \\
+\hline
+{\em type} & The string representation of the wave type. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_acoustic_wave_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_acoustic_wave_a326481ed7964cd28bef9d5dae8dd26d8}\index{AcousticWave@{AcousticWave}!computeSamples@{computeSamples}}
+\index{computeSamples@{computeSamples}!AcousticWave@{AcousticWave}}
+\doxysubsubsection{\texorpdfstring{computeSamples()}{computeSamples()}}
+{\footnotesize\ttfamily \label{class_acoustic_wave_a326481ed7964cd28bef9d5dae8dd26d8} 
+void Acoustic\+Wave::\+compute\+Samples (\begin{DoxyParamCaption}\item[{float}]{duration}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Allocates and initializes the sample array based on duration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em duration} & The length of the wave in seconds. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \doxymbox{\hyperlink{class_sawtooth_wave_acb5c561a757e9bbb0121ee2c6a2d0f82}{Sawtooth\+Wave}}, \doxymbox{\hyperlink{class_sine_wave_aa5e7dd5edf5c6244c4cbdef472b24a24}{Sine\+Wave}}, \doxymbox{\hyperlink{class_square_wave_ad0ba66e8210bafb936069aa164ca3bca}{Square\+Wave}}, and \doxymbox{\hyperlink{class_triangle_wave_a8282c7e9071a7997bfc253a8c85ae596}{Triangle\+Wave}}.
+
+\Hypertarget{class_acoustic_wave_aa728c5b6e49aa26f9633ae61032e2a05}\index{AcousticWave@{AcousticWave}!getSampleCount@{getSampleCount}}
+\index{getSampleCount@{getSampleCount}!AcousticWave@{AcousticWave}}
+\doxysubsubsection{\texorpdfstring{getSampleCount()}{getSampleCount()}}
+{\footnotesize\ttfamily \label{class_acoustic_wave_aa728c5b6e49aa26f9633ae61032e2a05} 
+int Acoustic\+Wave::\+get\+Sample\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the total number of allocated samples. 
+
+\begin{DoxyReturn}{Returns}
+The integer count of samples. 
+\end{DoxyReturn}
+\Hypertarget{class_acoustic_wave_a50f388ca66f50c28cfcd6b9714566208}\index{AcousticWave@{AcousticWave}!getSamples@{getSamples}}
+\index{getSamples@{getSamples}!AcousticWave@{AcousticWave}}
+\doxysubsubsection{\texorpdfstring{getSamples()}{getSamples()}}
+{\footnotesize\ttfamily \label{class_acoustic_wave_a50f388ca66f50c28cfcd6b9714566208} 
+const \doxymbox{\hyperlink{class_dynamic_array}{Dynamic\+Array}}$<$ float $>$ \& Acoustic\+Wave::\+get\+Samples (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the generated audio samples. 
+
+\begin{DoxyReturn}{Returns}
+A constant reference to the underlying \doxylink{class_dynamic_array}{Dynamic\+Array} of float samples. 
+\end{DoxyReturn}
+\Hypertarget{class_acoustic_wave_ae4c81adcb5dd002edcb284c1eb75ba54}\index{AcousticWave@{AcousticWave}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!AcousticWave@{AcousticWave}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}}
+{\footnotesize\ttfamily \label{class_acoustic_wave_ae4c81adcb5dd002edcb284c1eb75ba54} 
+\doxymbox{\hyperlink{class_acoustic_wave}{Acoustic\+Wave}} Acoustic\+Wave::\+operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_acoustic_wave}{Acoustic\+Wave}} \&}]{other}{}\end{DoxyParamCaption}) const}
+
+
+
+Performs amplitude modulation, returning a new wave instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The modulating wave. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A newly constructed wave representing the modulation result. 
+\end{DoxyReturn}
+\Hypertarget{class_acoustic_wave_a7bf4027f0ceb402d9870f8a1355dcfd6}\index{AcousticWave@{AcousticWave}!operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}}
+\index{operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}!AcousticWave@{AcousticWave}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}=()}{operator*=()}}
+{\footnotesize\ttfamily \label{class_acoustic_wave_a7bf4027f0ceb402d9870f8a1355dcfd6} 
+\doxymbox{\hyperlink{class_acoustic_wave}{Acoustic\+Wave}} \& Acoustic\+Wave::\+operator\texorpdfstring{$\ast$}{*}= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_acoustic_wave}{Acoustic\+Wave}} \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Performs amplitude modulation by multiplying with another wave in-\/place. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The modulating wave. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the modified current wave. 
+\end{DoxyReturn}
+
+
+\label{doc-related-members}
+\Hypertarget{class_acoustic_wave_doc-related-members}
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_acoustic_wave_a85748cee4c08d1ab28c0c95a47376751}\index{AcousticWave@{AcousticWave}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!AcousticWave@{AcousticWave}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily \label{class_acoustic_wave_a85748cee4c08d1ab28c0c95a47376751} 
+std::\+ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std::\+ostream \&}]{os}{, }\item[{const \doxymbox{\hyperlink{class_acoustic_wave}{Acoustic\+Wave}} \&}]{wave}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Overloads the stream insertion operator for outputting wave metadata. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream. \\
+\hline
+{\em wave} & The \doxylink{class_acoustic_wave}{Acoustic\+Wave} instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the modified output stream. 
+\end{DoxyReturn}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_acoustic_wave_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_acoustic_wave_a4522777a15d2e1e30024c9acead60746}\index{AcousticWave@{AcousticWave}!amplitude@{amplitude}}
+\index{amplitude@{amplitude}!AcousticWave@{AcousticWave}}
+\doxysubsubsection{\texorpdfstring{amplitude}{amplitude}}
+{\footnotesize\ttfamily \label{class_acoustic_wave_a4522777a15d2e1e30024c9acead60746} 
+float Acoustic\+Wave::\+amplitude\hspace{0.3cm}{\ttfamily [protected]}}
+
+The amplitude (volume) of the wave. \Hypertarget{class_acoustic_wave_ad076aa6b497ee3426a884419050c97f2}\index{AcousticWave@{AcousticWave}!frequency@{frequency}}
+\index{frequency@{frequency}!AcousticWave@{AcousticWave}}
+\doxysubsubsection{\texorpdfstring{frequency}{frequency}}
+{\footnotesize\ttfamily \label{class_acoustic_wave_ad076aa6b497ee3426a884419050c97f2} 
+float Acoustic\+Wave::\+frequency\hspace{0.3cm}{\ttfamily [protected]}}
+
+The frequency of the wave in Hertz. \Hypertarget{class_acoustic_wave_a1dfb7ffff3ddeeedb5705587e8f351f4}\index{AcousticWave@{AcousticWave}!sample\_rate@{sample\_rate}}
+\index{sample\_rate@{sample\_rate}!AcousticWave@{AcousticWave}}
+\doxysubsubsection{\texorpdfstring{sample\_rate}{sample\_rate}}
+{\footnotesize\ttfamily \label{class_acoustic_wave_a1dfb7ffff3ddeeedb5705587e8f351f4} 
+float Acoustic\+Wave::\+sample\+\_\+rate\hspace{0.3cm}{\ttfamily [protected]}}
+
+The sampling rate in Hertz. \Hypertarget{class_acoustic_wave_a348590cd98937636b32b3c343ea57085}\index{AcousticWave@{AcousticWave}!samples@{samples}}
+\index{samples@{samples}!AcousticWave@{AcousticWave}}
+\doxysubsubsection{\texorpdfstring{samples}{samples}}
+{\footnotesize\ttfamily \label{class_acoustic_wave_a348590cd98937636b32b3c343ea57085} 
+\doxymbox{\hyperlink{class_dynamic_array}{Dynamic\+Array}}$<$float$>$ Acoustic\+Wave::\+samples\hspace{0.3cm}{\ttfamily [protected]}}
+
+The container storing the generated audio samples. \Hypertarget{class_acoustic_wave_a85495cc953a90ce4cea075bcf9ff3ee4}\index{AcousticWave@{AcousticWave}!wave\_type@{wave\_type}}
+\index{wave\_type@{wave\_type}!AcousticWave@{AcousticWave}}
+\doxysubsubsection{\texorpdfstring{wave\_type}{wave\_type}}
+{\footnotesize\ttfamily \label{class_acoustic_wave_a85495cc953a90ce4cea075bcf9ff3ee4} 
+std::\+string Acoustic\+Wave::\+wave\+\_\+type\hspace{0.3cm}{\ttfamily [protected]}}
+
+A string identifier for the type of the wave. 
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_wave_8h}{Wave.\+h}}\item 
+\doxymbox{\hyperlink{_wave_8cpp}{Wave.\+cpp}}\end{DoxyCompactItemize}

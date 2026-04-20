@@ -1,0 +1,199 @@
+\doxysection{Dynamic\+Array\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_dynamic_array}{}\label{class_dynamic_array}\index{DynamicArray$<$ T $>$@{DynamicArray$<$ T $>$}}
+
+
+A generic dynamic array implementation for contiguous memory storage.  
+
+
+
+
+{\ttfamily \+\#include $<$Dynamic\+Array.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_dynamic_array_a7d42e6eaa66bab7c43f193e78d2d56a9}\label{class_dynamic_array_a7d42e6eaa66bab7c43f193e78d2d56a9} 
+{\bfseries Dynamic\+Array} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. Initializes an empty array with a default capacity. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_dynamic_array_a8caafc58124c055d6f198e31ecb83e4c}{Dynamic\+Array}} (const \doxymbox{\hyperlink{class_dynamic_array}{Dynamic\+Array}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\Hypertarget{class_dynamic_array_ab004399d442ebd2a9698cbc8da0b48f2}\label{class_dynamic_array_ab004399d442ebd2a9698cbc8da0b48f2} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Dynamic\+Array} ()
+\begin{DoxyCompactList}\small\item\em Destructor. Frees the allocated memory. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_dynamic_array}{Dynamic\+Array}} \& \doxymbox{\hyperlink{class_dynamic_array_afebe6c73b83f5049412e10220dc91b46}{operator=}} (const \doxymbox{\hyperlink{class_dynamic_array}{Dynamic\+Array}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_dynamic_array_a46ad38530a865662bf0046c19eb196f5}{resize}} (int new\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Resizes the array to the specified size. Reallocates memory if necessary. \end{DoxyCompactList}\item 
+T \& \doxymbox{\hyperlink{class_dynamic_array_ac409cee6ae68e0cff29b9b597e1a08c2}{operator\+[$\,$]\+}} (int index)
+\begin{DoxyCompactList}\small\item\em Accesses the element at the specified index. \end{DoxyCompactList}\item 
+const T \& \doxymbox{\hyperlink{class_dynamic_array_a9978a6bfa3d2da4b75683484afeed53c}{operator\+[$\,$]\+}} (int index) const
+\begin{DoxyCompactList}\small\item\em Accesses the element at the specified index (read-\/only). \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_dynamic_array_acbec0bb643ebec934cf5e9dfc1ecf01e}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the current number of elements in the array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename U$>$ }\\std::\+ostream \& \doxymbox{\hyperlink{class_dynamic_array_a3c6636225a81a2caaf2a6297d008e32c}{operator$<$$<$}} (std::\+ostream \&os, const \doxymbox{\hyperlink{class_dynamic_array}{Dynamic\+Array}}$<$ U $>$ \&arr)
+\begin{DoxyCompactList}\small\item\em Overloads the stream insertion operator for outputting array contents. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Dynamic\+Array$<$ T $>$}
+A generic dynamic array implementation for contiguous memory storage. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the elements to be stored in the array. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\label{doc-constructors}
+\Hypertarget{class_dynamic_array_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_dynamic_array_a8caafc58124c055d6f198e31ecb83e4c}\index{DynamicArray$<$ T $>$@{DynamicArray$<$ T $>$}!DynamicArray@{DynamicArray}}
+\index{DynamicArray@{DynamicArray}!DynamicArray$<$ T $>$@{DynamicArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DynamicArray()}{DynamicArray()}}
+{\footnotesize\ttfamily \label{class_dynamic_array_a8caafc58124c055d6f198e31ecb83e4c} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{class_dynamic_array}{Dynamic\+Array}}$<$ T $>$::\+\+Dynamic\+Array (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_dynamic_array}{Dynamic\+Array}}$<$ T $>$ \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The \doxylink{class_dynamic_array}{Dynamic\+Array} instance to copy from. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_dynamic_array_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_dynamic_array_acbec0bb643ebec934cf5e9dfc1ecf01e}\index{DynamicArray$<$ T $>$@{DynamicArray$<$ T $>$}!getSize@{getSize}}
+\index{getSize@{getSize}!DynamicArray$<$ T $>$@{DynamicArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily \label{class_dynamic_array_acbec0bb643ebec934cf5e9dfc1ecf01e} 
+template$<$typename T$>$ \\
+int \doxymbox{\hyperlink{class_dynamic_array}{Dynamic\+Array}}$<$ T $>$::\+get\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the current number of elements in the array. 
+
+\begin{DoxyReturn}{Returns}
+The size of the array. 
+\end{DoxyReturn}
+\Hypertarget{class_dynamic_array_afebe6c73b83f5049412e10220dc91b46}\index{DynamicArray$<$ T $>$@{DynamicArray$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!DynamicArray$<$ T $>$@{DynamicArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{class_dynamic_array_afebe6c73b83f5049412e10220dc91b46} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{class_dynamic_array}{Dynamic\+Array}} \& \doxymbox{\hyperlink{class_dynamic_array}{Dynamic\+Array}}$<$ T $>$::\+operator= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_dynamic_array}{Dynamic\+Array}}$<$ T $>$ \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Copy assignment operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The \doxylink{class_dynamic_array}{Dynamic\+Array} instance to assign from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the current instance. 
+\end{DoxyReturn}
+\Hypertarget{class_dynamic_array_ac409cee6ae68e0cff29b9b597e1a08c2}\index{DynamicArray$<$ T $>$@{DynamicArray$<$ T $>$}!operator\+[]\+@{operator[]}}
+\index{operator\+[]\+@{operator[]}!DynamicArray$<$ T $>$@{DynamicArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_dynamic_array_ac409cee6ae68e0cff29b9b597e1a08c2} 
+template$<$typename T$>$ \\
+T \& \doxymbox{\hyperlink{class_dynamic_array}{Dynamic\+Array}}$<$ T $>$::\+operator\+[$\,$]\+ (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})}
+
+
+
+Accesses the element at the specified index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The zero-\/based index of the element. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the element. 
+\end{DoxyReturn}
+\Hypertarget{class_dynamic_array_a9978a6bfa3d2da4b75683484afeed53c}\index{DynamicArray$<$ T $>$@{DynamicArray$<$ T $>$}!operator\+[]\+@{operator[]}}
+\index{operator\+[]\+@{operator[]}!DynamicArray$<$ T $>$@{DynamicArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_dynamic_array_a9978a6bfa3d2da4b75683484afeed53c} 
+template$<$typename T$>$ \\
+const T \& \doxymbox{\hyperlink{class_dynamic_array}{Dynamic\+Array}}$<$ T $>$::\+operator\+[$\,$]\+ (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption}) const}
+
+
+
+Accesses the element at the specified index (read-\/only). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The zero-\/based index of the element. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A constant reference to the element. 
+\end{DoxyReturn}
+\Hypertarget{class_dynamic_array_a46ad38530a865662bf0046c19eb196f5}\index{DynamicArray$<$ T $>$@{DynamicArray$<$ T $>$}!resize@{resize}}
+\index{resize@{resize}!DynamicArray$<$ T $>$@{DynamicArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily \label{class_dynamic_array_a46ad38530a865662bf0046c19eb196f5} 
+template$<$typename T$>$ \\
+void \doxymbox{\hyperlink{class_dynamic_array}{Dynamic\+Array}}$<$ T $>$::\+resize (\begin{DoxyParamCaption}\item[{int}]{new\+\_\+size}{}\end{DoxyParamCaption})}
+
+
+
+Resizes the array to the specified size. Reallocates memory if necessary. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+size} & The target size for the array. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-related-members}
+\Hypertarget{class_dynamic_array_doc-related-members}
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_dynamic_array_a3c6636225a81a2caaf2a6297d008e32c}\index{DynamicArray$<$ T $>$@{DynamicArray$<$ T $>$}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!DynamicArray$<$ T $>$@{DynamicArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily \label{class_dynamic_array_a3c6636225a81a2caaf2a6297d008e32c} 
+template$<$typename T$>$ \\
+template$<$typename U$>$ \\
+std::\+ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std::\+ostream \&}]{os}{, }\item[{const \doxymbox{\hyperlink{class_dynamic_array}{Dynamic\+Array}}$<$ U $>$ \&}]{arr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Overloads the stream insertion operator for outputting array contents. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em U} & The data type of the array elements. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream. \\
+\hline
+{\em arr} & The \doxylink{class_dynamic_array}{Dynamic\+Array} instance to output. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the modified output stream. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_dynamic_array_8h}{Dynamic\+Array.\+h}}\end{DoxyCompactItemize}

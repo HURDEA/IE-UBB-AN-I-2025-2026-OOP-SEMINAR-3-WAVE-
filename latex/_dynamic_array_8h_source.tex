@@ -1,0 +1,39 @@
+\doxysection{Dynamic\+Array.\+h}
+\hypertarget{_dynamic_array_8h_source}{}\label{_dynamic_array_8h_source}\doxymbox{\hyperlink{_dynamic_array_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_dynamic_array_a7d42e6eaa66bab7c43f193e78d2d56a9}{DynamicArray}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ T*\ data;\ \ \ \ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ size;\ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ capacity;\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \doxymbox{\hyperlink{class_dynamic_array_a7d42e6eaa66bab7c43f193e78d2d56a9}{DynamicArray}}();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00031\ \ \ \ \ \doxymbox{\hyperlink{class_dynamic_array_a8caafc58124c055d6f198e31ecb83e4c}{DynamicArray}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_dynamic_array_a7d42e6eaa66bab7c43f193e78d2d56a9}{DynamicArray}}\&\ other);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00036\ \ \ \ \ \doxymbox{\hyperlink{class_dynamic_array_ab004399d442ebd2a9698cbc8da0b48f2}{\string~DynamicArray}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00043\ \ \ \ \ \doxymbox{\hyperlink{class_dynamic_array_a7d42e6eaa66bab7c43f193e78d2d56a9}{DynamicArray}}\&\ \doxymbox{\hyperlink{class_dynamic_array_afebe6c73b83f5049412e10220dc91b46}{operator=}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_dynamic_array_a7d42e6eaa66bab7c43f193e78d2d56a9}{DynamicArray}}\&\ other);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_dynamic_array_a46ad38530a865662bf0046c19eb196f5}{resize}}(\textcolor{keywordtype}{int}\ new\_size);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00056\ \ \ \ \ T\&\ \doxymbox{\hyperlink{class_dynamic_array_ac409cee6ae68e0cff29b9b597e1a08c2}{operator[]}}(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{const}\ T\&\ \doxymbox{\hyperlink{class_dynamic_array_a9978a6bfa3d2da4b75683484afeed53c}{operator[]}}(\textcolor{keywordtype}{int}\ index)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_dynamic_array_acbec0bb643ebec934cf5e9dfc1ecf01e}{getSize}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ U>}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{friend}\ std::ostream\&\ \doxymbox{\hyperlink{class_dynamic_array_a3c6636225a81a2caaf2a6297d008e32c}{operator<<}}(std::ostream\&\ os,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_dynamic_array_a7d42e6eaa66bab7c43f193e78d2d56a9}{DynamicArray<U>}}\&\ arr);}
+\DoxyCodeLine{00080\ \};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#include\ "{}DynamicArray.tpp"{}}}
+
+\end{DoxyCode}

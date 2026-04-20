@@ -1,0 +1,50 @@
+\doxysection{Wave\+Output Class Reference}
+\hypertarget{class_wave_output}{}\label{class_wave_output}\index{WaveOutput@{WaveOutput}}
+
+
+Utility class for file operations related to acoustic waves.  
+
+
+
+
+{\ttfamily \+\#include $<$Wave.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \doxymbox{\hyperlink{class_wave_output_a23f91e605b8be7a89fe241fa642f9b2e}{save\+Samples}} (const std::\+string \&csv\+\_\+path, const \doxymbox{\hyperlink{class_acoustic_wave}{Acoustic\+Wave}} \&w)
+\begin{DoxyCompactList}\small\item\em Saves the samples of an \doxylink{class_acoustic_wave}{Acoustic\+Wave} to a specified file path in CSV format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Utility class for file operations related to acoustic waves. 
+
+\label{doc-func-members}
+\Hypertarget{class_wave_output_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_wave_output_a23f91e605b8be7a89fe241fa642f9b2e}\index{WaveOutput@{WaveOutput}!saveSamples@{saveSamples}}
+\index{saveSamples@{saveSamples}!WaveOutput@{WaveOutput}}
+\doxysubsubsection{\texorpdfstring{saveSamples()}{saveSamples()}}
+{\footnotesize\ttfamily \label{class_wave_output_a23f91e605b8be7a89fe241fa642f9b2e} 
+bool Wave\+Output::\+save\+Samples (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{csv\+\_\+path}{, }\item[{const \doxymbox{\hyperlink{class_acoustic_wave}{Acoustic\+Wave}} \&}]{w}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Saves the samples of an \doxylink{class_acoustic_wave}{Acoustic\+Wave} to a specified file path in CSV format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em csv\+\_\+path} & The destination file path. \\
+\hline
+{\em w} & The \doxylink{class_acoustic_wave}{Acoustic\+Wave} instance to serialize. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the operation succeeded, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_wave_8h}{Wave.\+h}}\item 
+\doxymbox{\hyperlink{_wave_8cpp}{Wave.\+cpp}}\end{DoxyCompactItemize}

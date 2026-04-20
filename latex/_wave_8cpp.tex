@@ -1,0 +1,48 @@
+\doxysection{Wave.\+cpp File Reference}
+\hypertarget{_wave_8cpp}{}\label{_wave_8cpp}\index{Wave.cpp@{Wave.cpp}}
+
+
+Implementation of the \doxylink{class_acoustic_wave}{Acoustic\+Wave} hierarchy and \doxylink{class_wave_output}{Wave\+Output} classes.  
+
+
+{\ttfamily \+\#include "{}Wave.\+h"{}}\newline
+{\ttfamily \+\#include $<$cmath$>$}\newline
+{\ttfamily \+\#include $<$fstream$>$}\newline
+{\ttfamily \+\#include $<$algorithm$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std::\+ostream \& \doxymbox{\hyperlink{_wave_8cpp_a85748cee4c08d1ab28c0c95a47376751}{operator$<$$<$}} (std::\+ostream \&os, const \doxymbox{\hyperlink{class_acoustic_wave}{Acoustic\+Wave}} \&wave)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_wave_8cpp_aa08a577393243b86dfd2a97e61443673}\label{_wave_8cpp_aa08a577393243b86dfd2a97e61443673} 
+const float {\bfseries PI} = std::\+acos(-\/1.\+0f)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the \doxylink{class_acoustic_wave}{Acoustic\+Wave} hierarchy and \doxylink{class_wave_output}{Wave\+Output} classes. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{_wave_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_wave_8cpp_a85748cee4c08d1ab28c0c95a47376751}\index{Wave.cpp@{Wave.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Wave.cpp@{Wave.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily \label{_wave_8cpp_a85748cee4c08d1ab28c0c95a47376751} 
+std::\+ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std::\+ostream \&}]{os}{, }\item[{const \doxymbox{\hyperlink{class_acoustic_wave}{Acoustic\+Wave}} \&}]{wave}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream. \\
+\hline
+{\em wave} & The \doxylink{class_acoustic_wave}{Acoustic\+Wave} instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the modified output stream. 
+\end{DoxyReturn}

@@ -1,0 +1,108 @@
+\doxysection{Synthesizer\+Track Class Reference}
+\hypertarget{class_synthesizer_track}{}\label{class_synthesizer_track}\index{SynthesizerTrack@{SynthesizerTrack}}
+
+
+Derived class representing a sequential track of multiple acoustic waveforms.  
+
+
+
+
+{\ttfamily \+\#include $<$Wave.\+h$>$}
+
+Inheritance diagram for Synthesizer\+Track:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_synthesizer_track}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_synthesizer_track_a89da0a7dc5d526c798dca64c78a7b5da}{Synthesizer\+Track}} (float sr=44100.\+0f)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_synthesizer_track}{Synthesizer\+Track}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_synthesizer_track_a1204349346971620019c8622d02000db}{add\+Note}} (float freq, float duration, float amp=0.\+5f)
+\begin{DoxyCompactList}\small\item\em Generates and appends a note\textquotesingle{}s samples to the track. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_acoustic_wave}{Acoustic\+Wave}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_acoustic_wave_ad13de15b14326449f0d55ceae9c61dc1}{Acoustic\+Wave}} (float freq=440.\+0f, float amp=0.\+8f, float sr=44100.\+0f, std::\+string type="{}Generic"{})
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{class_acoustic_wave}{Acoustic\+Wave} with specified parameters. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Acoustic\+Wave} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper derived class cleanup. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_acoustic_wave_a326481ed7964cd28bef9d5dae8dd26d8}{compute\+Samples}} (float duration)
+\begin{DoxyCompactList}\small\item\em Allocates and initializes the sample array based on duration. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_dynamic_array}{Dynamic\+Array}}$<$ float $>$ \& \doxymbox{\hyperlink{class_acoustic_wave_a50f388ca66f50c28cfcd6b9714566208}{get\+Samples}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the generated audio samples. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_acoustic_wave_aa728c5b6e49aa26f9633ae61032e2a05}{get\+Sample\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the total number of allocated samples. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_acoustic_wave}{Acoustic\+Wave}} \& \doxymbox{\hyperlink{class_acoustic_wave_a7bf4027f0ceb402d9870f8a1355dcfd6}{operator\texorpdfstring{$\ast$}{*}=}} (const \doxymbox{\hyperlink{class_acoustic_wave}{Acoustic\+Wave}} \&other)
+\begin{DoxyCompactList}\small\item\em Performs amplitude modulation by multiplying with another wave in-\/place. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_acoustic_wave}{Acoustic\+Wave}} \doxymbox{\hyperlink{class_acoustic_wave_ae4c81adcb5dd002edcb284c1eb75ba54}{operator\texorpdfstring{$\ast$}{*}}} (const \doxymbox{\hyperlink{class_acoustic_wave}{Acoustic\+Wave}} \&other) const
+\begin{DoxyCompactList}\small\item\em Performs amplitude modulation, returning a new wave instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_acoustic_wave}{Acoustic\+Wave}}}
+\begin{DoxyCompactItemize}
+\item 
+float \doxymbox{\hyperlink{class_acoustic_wave_ad076aa6b497ee3426a884419050c97f2}{frequency}}
+\item 
+float \doxymbox{\hyperlink{class_acoustic_wave_a4522777a15d2e1e30024c9acead60746}{amplitude}}
+\item 
+float \doxymbox{\hyperlink{class_acoustic_wave_a1dfb7ffff3ddeeedb5705587e8f351f4}{sample\+\_\+rate}}
+\item 
+\doxymbox{\hyperlink{class_dynamic_array}{Dynamic\+Array}}$<$ float $>$ \doxymbox{\hyperlink{class_acoustic_wave_a348590cd98937636b32b3c343ea57085}{samples}}
+\item 
+std::\+string \doxymbox{\hyperlink{class_acoustic_wave_a85495cc953a90ce4cea075bcf9ff3ee4}{wave\+\_\+type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Derived class representing a sequential track of multiple acoustic waveforms. 
+
+\label{doc-constructors}
+\Hypertarget{class_synthesizer_track_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_synthesizer_track_a89da0a7dc5d526c798dca64c78a7b5da}\index{SynthesizerTrack@{SynthesizerTrack}!SynthesizerTrack@{SynthesizerTrack}}
+\index{SynthesizerTrack@{SynthesizerTrack}!SynthesizerTrack@{SynthesizerTrack}}
+\doxysubsubsection{\texorpdfstring{SynthesizerTrack()}{SynthesizerTrack()}}
+{\footnotesize\ttfamily \label{class_synthesizer_track_a89da0a7dc5d526c798dca64c78a7b5da} 
+Synthesizer\+Track::\+\+Synthesizer\+Track (\begin{DoxyParamCaption}\item[{float}]{sr}{ = {\ttfamily 44100.0f}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_synthesizer_track}{Synthesizer\+Track}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sr} & The sample rate in Hertz (default 44100.\+0f). \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_synthesizer_track_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_synthesizer_track_a1204349346971620019c8622d02000db}\index{SynthesizerTrack@{SynthesizerTrack}!addNote@{addNote}}
+\index{addNote@{addNote}!SynthesizerTrack@{SynthesizerTrack}}
+\doxysubsubsection{\texorpdfstring{addNote()}{addNote()}}
+{\footnotesize\ttfamily \label{class_synthesizer_track_a1204349346971620019c8622d02000db} 
+void Synthesizer\+Track::\+add\+Note (\begin{DoxyParamCaption}\item[{float}]{freq}{, }\item[{float}]{duration}{, }\item[{float}]{amp}{ = {\ttfamily 0.5f}}\end{DoxyParamCaption})}
+
+
+
+Generates and appends a note\textquotesingle{}s samples to the track. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em freq} & The frequency in Hertz. \\
+\hline
+{\em duration} & The duration of the note in seconds. \\
+\hline
+{\em amp} & The amplitude of the note. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_wave_8h}{Wave.\+h}}\item 
+\doxymbox{\hyperlink{_wave_8cpp}{Wave.\+cpp}}\end{DoxyCompactItemize}
