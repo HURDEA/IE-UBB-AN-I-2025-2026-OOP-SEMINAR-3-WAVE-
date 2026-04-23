@@ -24,6 +24,8 @@ public:
      */
     DynamicArray();
 
+    DynamicArray(unsigned int capacity);
+
     /**
      * @brief Copy constructor.
      * @param other The DynamicArray instance to copy from.
@@ -77,6 +79,8 @@ public:
      */
     template <typename U>
     friend std::ostream& operator<<(std::ostream& os, const DynamicArray<U>& arr);
+
+    DynamicArray operator+(const DynamicArray& other) const;
 };
 
 #include "DynamicArray.tpp"

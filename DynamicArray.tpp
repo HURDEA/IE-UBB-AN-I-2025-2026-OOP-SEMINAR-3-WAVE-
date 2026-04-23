@@ -11,6 +11,13 @@ DynamicArray<T>::DynamicArray() : size(0), capacity(10) {
     data = new T[capacity];
 }
 
+template<typename T>
+DynamicArray<T>::DynamicArray(unsigned int capacity) {
+    data = new T[capacity];
+    this->capacity = capacity;
+    this->size = 0;
+}
+
 template <typename T>
 DynamicArray<T>::DynamicArray(const DynamicArray& other) : size(other.size), capacity(other.capacity) {
     data = new T[capacity];
@@ -65,6 +72,19 @@ const T& DynamicArray<T>::operator[](int index) const {
 template <typename T>
 int DynamicArray<T>::getSize() const {
     return size;
+}
+
+template<typename T>
+DynamicArray<T> DynamicArray<T>::operator+(const DynamicArray &other) const {
+    auto result = DynamicArray(this->size+other.size);
+    unsigned int currentPos = 0;
+    for (unsigned int position = 0; position < this->size; position++) {
+        result.data[currentPos++] = this->data[position];
+    }
+    for (unsigned int position = 0; position < other.size; position++) {
+        result.data[currentPos++] = other.data[position];
+    }
+    return result;
 }
 
 template <typename U>

@@ -52,6 +52,12 @@ std::ostream& operator<<(std::ostream& os, const AcousticWave& wave) {
     return os;
 }
 
+AcousticWave AcousticWave::operator+(const AcousticWave &other) const {
+    AcousticWave result = AcousticWave(this->frequency, this->amplitude, this->sample_rate, this->wave_type);
+    result.samples=this->samples+other.samples;
+    return result;
+}
+
 SineWave::SineWave(float freq, float amp, float sr)
     : AcousticWave(freq, amp, sr, "Sine") {
 }

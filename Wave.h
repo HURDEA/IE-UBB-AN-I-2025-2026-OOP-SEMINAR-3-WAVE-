@@ -74,6 +74,8 @@ public:
      * @return A reference to the modified output stream.
      */
     friend std::ostream& operator<<(std::ostream& os, const AcousticWave& wave);
+
+    AcousticWave operator+(const AcousticWave& other) const;
 };
 
 /**

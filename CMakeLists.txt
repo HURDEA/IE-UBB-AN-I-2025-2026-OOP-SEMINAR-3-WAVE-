@@ -12,4 +12,6 @@ add_executable(IE_UBB_AN_I_2025_2026_OOP_SEMINAR_3_WAVE_
         Rickroll.cpp
         Rickroll.h
         Wave.cpp
-        Wave.h)
+        Wave.h
+        Silence.cpp
+        Silence.h)
