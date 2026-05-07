@@ -14,4 +14,4 @@ add_executable(IE_UBB_AN_I_2025_2026_OOP_SEMINAR_3_WAVE_
         Wave.cpp
         Wave.h
         Silence.cpp
-        Silence.h)
+        Silence.h "MorseEncoder.cpp" "SignalProcessor.h" "SignalProcessor.cpp")

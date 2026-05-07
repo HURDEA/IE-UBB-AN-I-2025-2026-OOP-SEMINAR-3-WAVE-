@@ -77,6 +77,7 @@ int DynamicArray<T>::getSize() const {
 template<typename T>
 DynamicArray<T> DynamicArray<T>::operator+(const DynamicArray &other) const {
     auto result = DynamicArray(this->size+other.size);
+    result.size = this->size + other.size;
     unsigned int currentPos = 0;
     for (unsigned int position = 0; position < this->size; position++) {
         result.data[currentPos++] = this->data[position];

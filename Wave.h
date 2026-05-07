@@ -22,6 +22,20 @@ protected:
 
 public:
     /**
+     * @brief Retrieves a specific audio sample by index.
+     * @param index The position of the sample.
+     * @return The float value of the sample.
+     */
+    float getSample(int index) const;
+
+    /**
+     * @brief Modifies a specific audio sample by index.
+     * @param index The position of the sample.
+     * @param value The new float value to set.
+     */
+    void setSample(int index, float value);
+
+    /**
      * @brief Constructs an AcousticWave with specified parameters.
      * @param freq The frequency in Hertz (default 440.0f).
      * @param amp The amplitude (default 0.8f).

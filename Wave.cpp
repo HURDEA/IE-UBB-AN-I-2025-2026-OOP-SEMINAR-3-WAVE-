@@ -159,3 +159,11 @@ bool WaveOutput::saveSamples(const std::string& csv_path, const AcousticWave& w)
     file.close();
     return true;
 }
+
+float AcousticWave::getSample(int index) const {
+    return samples[index];
+}
+
+void AcousticWave::setSample(int index, float value) {
+    samples[index] = value;
+}

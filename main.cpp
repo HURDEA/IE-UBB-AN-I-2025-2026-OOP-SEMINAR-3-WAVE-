@@ -1,13 +1,16 @@
 /**
- * @file Seminar 3.cpp
+ * @file main.cpp
  * @brief Primary application entry point.
- * * Integrates the standard acoustic wave experiments and the custom synthesizer
- * sequence generator into a single executable pipeline.
+ * * Integrates the standard acoustic wave experiments, custom synthesizer
+ * sequence generator, and the new Morse code transmitter into a single pipeline.
  */
 
 #include <iostream>
+#include <string>
 #include "Wave.h"
 #include "Rickroll.h"
+#include "MorseEncoder.h"
+#include "SignalProcessor.h"
 
  /**
   * @brief Executes standard laboratory experiments related to acoustic waves.
@@ -44,11 +47,55 @@ void runStandardExperiments() {
  * @return Execution status code.
  */
 int main() {
-    std::cout << "Starting audio generation protocol...\n";
+    std::cout << "Starting audio generation protocol...\n\n";
 
+    // 1. Existing Seminar 3 functionality
     runStandardExperiments();
+    std::cout << "\n";
     generateRickrollSequence();
+    std::cout << "\n";
 
+    // 2. Seminar 4: Morse Code Transmitter CLI
+    // Ensure "morse.txt" is in the same directory as your executable
+    MorseEncoder::loadAlphabet("morse.txt");
+
+    std::cout << "--- Morse Code Transmitter ---\n";
+
+    char choice;
+    do {
+        std::string message;
+        std::string filename;
+
+        std::cout << "Enter message: ";
+        // std::ws safely extracts any leading whitespace or leftover newlines in the buffer
+        std::getline(std::cin >> std::ws, message);
+
+        std::cout << "Enter filename: ";
+        std::getline(std::cin, filename);
+
+        // Encode the string to Morse audio
+        AcousticWave finalWave = MorseEncoder::encode(message);
+
+        // Apply echo effect (e.g., 0.4s delay, 50% attenuation)
+        SignalProcessor::applyEcho(finalWave, 0.4f, 0.5f);
+
+        // Calculate actual duration based on sample count
+        float finalDuration = finalWave.getSampleCount() / 44100.0f;
+
+        std::cout << "Encoded '" << message << "' (Length: " << finalDuration << " seconds).\n";
+
+        // Save to file
+        WaveOutput::saveSamples(filename, finalWave);
+        std::cout << "File saved to " << filename << ".\n\n";
+
+        std::cout << "Do you want to send another message? (y/n): ";
+        std::cin >> choice;
+        std::cout << "\n";
+
+    } while (choice == 'y' || choice == 'Y');
+
+    std::cout << "Exiting application.\n";
     std::cout << "All processes completed successfully. Execute Python conversion script to finalize WAV generation.\n";
+
     return 0;
 }
